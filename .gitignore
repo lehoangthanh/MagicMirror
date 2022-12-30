@@ -24,6 +24,9 @@ jspm_modules
 # IDE Code ignoramuses.
 .idea/
 
+# History folder
+.history/
+
 # Various Windows ignoramuses.
 Thumbs.db
 ehthumbs.db

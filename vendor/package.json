@@ -10,7 +10,9 @@
 		"url": "https://github.com/MichMich/MagicMirror/issues"
 	},
 	"dependencies": {
+		"@eastuni/lunr-languages-ko": "^1.4.0",
 		"@fortawesome/fontawesome-free": "^6.2.0",
+		"lunar": "^0.0.3",
 		"moment": "^2.29.4",
 		"moment-timezone": "^0.5.37",
 		"nunjucks": "^3.2.3",

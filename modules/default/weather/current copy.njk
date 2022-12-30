@@ -7,7 +7,7 @@
                     {{ current.beaufortWindSpeed() | round }}
                 {% else %}
                     {% if config.useKmh %}
-                        {{ current.kmhWindSpeed() | round }}/Kmh
+                        {{ current.kmhWindSpeed() | round }}
                     {% else %}
                         {{ current.windSpeed | round }}
                     {% endif %}

@@ -38,7 +38,7 @@ Module.register("calendar", {
 		hideOngoing: false,
 		hideTime: false,
 		showTimeToday: false,
-		colored: false,
+		colored: true,
 		coloredSymbolOnly: false,
 		customEvents: [], // Array of {keyword: "", symbol: "", color: ""} where Keyword is a regexp and symbol/color are to be applied for matched
 		tableClass: "small",

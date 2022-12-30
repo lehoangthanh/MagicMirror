@@ -12,7 +12,8 @@
 		"Log": true,
 		"MM": true,
 		"Module": true,
-		"moment": true
+		"moment": true,
+		"lunar": true
 	},
 	"parserOptions": {
 		"sourceType": "module",

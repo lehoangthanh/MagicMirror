@@ -37,7 +37,7 @@ Module.register("clock", {
 	},
 	// Define required scripts.
 	getScripts: function () {
-		return ["moment.js", "moment-timezone.js", "suncalc.js"];
+		return ["moment.js", "moment-timezone.js", "suncalc.js", "lunar.js"];
 	},
 	// Define styles.
 	getStyles: function () {
@@ -127,6 +127,10 @@ Module.register("clock", {
 		// See issue: https://github.com/MichMich/MagicMirror/issues/181
 		let timeString;
 		const now = moment();
+		const lunarDate = getLunarDate(now.date(), now.month() + 1, now.year());
+		// console.log(getDayName(lunarDate));
+		const sDayInfo = getDayInfo(lunarDate.day, lunarDate.month, lunarDate.year, lunarDate.leap, lunarDate.jd, now.date(), now.month() + 1, now.year());
+		// console.log(getDayInfo(lunarDate.day, lunarDate.month, lunarDate.year, lunarDate.leap, lunarDate.jd, now.date(), now.month()+1, now.year()));
 		if (this.config.timezone) {
 			now.tz(this.config.timezone);
 		}
@@ -143,7 +147,8 @@ Module.register("clock", {
 		}
 
 		if (this.config.showDate) {
-			dateWrapper.innerHTML = now.format(this.config.dateFormat);
+			// dateWrapper.innerHTML = now.format(this.config.dateFormat);
+			dateWrapper.innerHTML = sDayInfo;
 			digitalWrapper.appendChild(dateWrapper);
 		}
 

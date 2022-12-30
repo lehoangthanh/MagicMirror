@@ -75,6 +75,7 @@ Module.register("weather", {
 
 	// Start the weather module.
 	start: function () {
+		console.log(this.config.useKmh);
 		moment.locale(this.config.lang);
 
 		// Initialize the weather provider.

@@ -80,7 +80,7 @@ function Server(config, callback) {
 
 	app.get("/cors", async function (req, res) {
 		// example: http://localhost:8080/cors?url=https://google.de
-
+		console.log("=============aaaaaaaaaaaaaaaa");
 		try {
 			const reg = "^/cors.+url=(.*)";
 			let url = "";
